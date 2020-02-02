@@ -12,15 +12,34 @@ import java.applet.AudioClip;
 import javax.swing.JApplet;
 import javax.swing.JOptionPane;
 
+import org.jointheleague.graphical.robot.Robot;
+
 public class AnimalFarm {
 	
 	public static void main(String[] args) {
+	
+		/* 1. Ask the user which animal they want, then play the sound of that animal. */	
+		JOptionPane.showMessageDialog(null,"Welcome to Animal Farm, (not the one by George Orwell) by Wesley Ge (Febuary 1st 2020)!");
+		JOptionPane.showMessageDialog(null,"Choose between cow, dog, cat, llama, or duck.");
+		for (int i=0; i<1000; i++) {
+		String input = JOptionPane.showInputDialog("What animal do you want to hear?");
+		if (input.equals("cow")) {
 			
-		/* 1. Ask the user which animal they want, then play the sound of that animal. */			 
-			
+			playMoo();
+		} else if (input.equals("duck")) {
+			playQuack();
+		}else if (input.equals("llama")) {
+			playLlama();
+		}else if (input.equals("dog")) {
+			playWoof();
+		}else if (input.equals("cat")) {
+			playMeow();
+		}
+		}
+	}
 		/* 2. Make it so that the user can keep entering new animals. */
 
-	}
+	
 
 	static void playMoo() {
 		playNoise(mooFile);

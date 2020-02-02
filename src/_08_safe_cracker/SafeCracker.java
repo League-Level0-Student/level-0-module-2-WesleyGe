@@ -22,9 +22,11 @@ public class SafeCracker {
 		 * Your mission: use the tryCode method to crack the safe by trying all possible
 		 * combinations
 		 */
-		
-
-	}
+		String input = JOptionPane.showInputDialog("Hack method?");
+		int number = Integer.parseInt(input);
+tryCode(number);
+		}
+	
 
 	static void tryCode(int guess) {
 		System.out.println("trying " + guess);
